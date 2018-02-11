@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_padding">20dp</dimen>
+    <dimen name="imageview_width">100dp</dimen>
+    <dimen name="imageview_height">180dp</dimen>
+    <dimen name="padding_default">10dp</dimen>
+    <dimen name="padding_rating">16dp</dimen>
+    <dimen name="layout_rating">80dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

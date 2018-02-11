@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--Original Title-->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/title_padding"
+            android:text="@string/text_na"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorTextDefault" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Thumbnail Poster-->
+            <ImageView
+                android:id="@+id/iv_thumbnail"
+                android:layout_width="@dimen/imageview_width"
+                android:layout_height="@dimen/imageview_height"
+                android:padding="@dimen/padding_default"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/art_themoviedb"
+                android:contentDescription="@string/thumbnail_poster"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_release_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_thumbnail"
+                android:gravity="center"
+                android:padding="@dimen/padding_default"
+                android:text="@string/release_date_label"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <!--Released date-->
+            <TextView
+                android:id="@+id/tv_releasedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/tv_release_date_title"
+                android:gravity="center"
+                android:padding="@dimen/padding_default"
+                android:text="@string/text_na"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tv_rating_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_release_date_title"
+                android:layout_toRightOf="@+id/iv_thumbnail"
+                android:gravity="center"
+                android:padding="@dimen/padding_rating"
+                android:text="@string/average_rating_label"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <!--Rating-->
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="@dimen/layout_rating"
+                android:layout_height="@dimen/layout_rating"
+                android:layout_below="@+id/tv_releasedate"
+                android:layout_toRightOf="@id/tv_rating_title"
+                android:background="@drawable/rating_circle"
+                android:gravity="center"
+                android:padding="@dimen/padding_default"
+                android:text="@string/text_na"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse"
+
+                />
+        </RelativeLayout>
+        <!--Overview-->
+
+        <TextView
+            android:id="@+id/tv_synopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/padding_default"
+            android:text="@string/text_na"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorTextDefault" />
+        <RelativeLayout
+            android:id="@+id/loadingPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

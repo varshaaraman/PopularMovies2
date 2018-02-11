@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:horizontalSpacing="0dp"
+    android:orientation="vertical"
+    android:stretchMode="none"
+    android:verticalSpacing="0dp">
+    <!--poster-->
+    <ImageView
+        android:id="@+id/iv_poster_offline"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:text="@string/thumbnail_poster"
+        android:textColor="#ffffff"
+        />
+
+</GridLayout>

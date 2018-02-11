@@ -1,58 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-    <TextView
-        android:id="@+id/tv_title"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:text="title" />
+        android:orientation="vertical">
+        <!--Original Title-->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/title_padding"
+            android:text="@string/text_na"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorTextDefault" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Thumbnail Poster-->
+            <ImageView
+                android:id="@+id/iv_thumbnail"
+                android:layout_width="@dimen/imageview_width"
+                android:layout_height="@dimen/imageview_height"
+                android:padding="@dimen/padding_default"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/art_themoviedb"
+                android:contentDescription="@string/thumbnail_poster"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_release_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_thumbnail"
+                android:gravity="center"
+                android:padding="@dimen/padding_default"
+                android:text="@string/release_date_label"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <!--Released date-->
+            <TextView
+                android:id="@+id/tv_releasedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/tv_release_date_title"
+                android:gravity="center"
+                android:padding="@dimen/padding_default"
+                android:text="@string/text_na"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tv_rating_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_release_date_title"
+                android:layout_toRightOf="@+id/iv_thumbnail"
+                android:gravity="center"
+                android:padding="@dimen/padding_rating"
+                android:text="@string/average_rating_label"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <!--Rating-->
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="@dimen/layout_rating"
+                android:layout_height="@dimen/layout_rating"
+                android:layout_below="@+id/tv_releasedate"
+                android:layout_toRightOf="@id/tv_rating_title"
+                android:background="@drawable/rating_circle"
+                android:gravity="center"
+                android:padding="@dimen/padding_default"
+                android:text="@string/text_na"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse"
+
+                />
+            <CheckBox
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:button="@android:drawable/btn_star"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_below="@id/tv_rating_title"
+                android:id="@+id/favorite"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"
+                android:onClick="onCheckboxClicked"
+                />
+        </RelativeLayout>
+        <!--Overview-->
+
+        <TextView
+            android:id="@+id/tv_synopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/padding_default"
+            android:text="@string/text_na"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorTextDefault" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimaryDark"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/padding_default"
+            android:text="@string/header_comments"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorTextDefault" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/review_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorPrimaryDark"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/padding_default"
+            android:text="@string/Trailer"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorTextDefault" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/trialer_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
 
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:id="@+id/iv_thumbnail"
-        android:layout_below="@+id/tv_title"
-        android:layout_alignParentLeft="true" />
-
-    <TextView
-        android:id="@+id/tv_releasedate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Release date"
-        android:layout_below="@+id/tv_title"
-        android:layout_centerHorizontal="true"
-        android:layout_toRightOf="@id/iv_thumbnail" />
-
-
-
-    <TextView
-        android:id="@+id/tv_rating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rating"
-        android:layout_below="@id/tv_releasedate"
-        android:layout_toRightOf="@id/iv_thumbnail"/>
-
-    <TextView
-        android:id="@+id/tv_synopsis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Synopsis"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-</RelativeLayout>
-
+    </LinearLayout>
+</ScrollView>

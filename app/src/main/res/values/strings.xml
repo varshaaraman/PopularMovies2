@@ -1,3 +1,98 @@
 <resources>
     <string name="app_name">MovieStage</string>
+    <string name="popularity">Popularity</string>
+    <string name="rating">Rating</string>
+    <string name="popularity_title">POPULAR MOVIES</string>
+    <string name="rating_title">TOP RATED MOVIES</string>
+    <string name="release_date_label">Release Date :</string>
+    <string name="text_na">NA</string>
+    <string name="average_rating_label">Average Rating:</string>
+    <string name="thumbnail_poster">Thumbnail poster</string>
+    <string name="app_label">Movies</string>
+    <string name="CheckFlag">checkFlag</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_offline_mode">Offline Mode</string>
+    <string name="key_pref_offline_mode">key_pref_offline_mode</string>
+    <string name="title_activity_starter">StarterActivity</string>
+    <string name="welcome_text"><b>Welcome to Movies App!!!</b></string>
+    <string name="description_text_one"> To Toggle between offline and online mode click on the settings fab icon present at the bottom right of the screen</string>
+    <string name="description_text_two">To view a grid of movie posters to view from swipe this screen to the left</string>
+    <string name="description_text_three">To view synopsis,title,release date,reviews and trailer click on the poster</string>
+    <string name="description_text_four">To change the sort order in the online mode click on the overflow menu</string>
+    <string name="empty_string">PSST!! You currently have no favorite movies. In order to favorite a movie click on the star icon present at the side of the poster in MovieDetail screen</string>
+    <string name="heade_comments">Comments</string>
+    <string name="header_comments">comments</string>
+    <string name="Trailer">header_trailer</string>
+
+
+    <!--<string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>-->
+
+    <!-- Example settings for Notifications -->
+    <!--<string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>-->
 </resources>
